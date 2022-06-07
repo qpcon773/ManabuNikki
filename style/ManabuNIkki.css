@@ -10,6 +10,11 @@ html,body{
     overflow: hidden;
 }
 
+img{
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
 .page{
     width: 100vw;
     height: 100vh;
@@ -238,4 +243,137 @@ html,body{
         width: 100%;
         left: 0;
     }
+}
+
+.p4 .lineBox{
+    width: 200px;
+    height: 300px;
+    background: rgb(26, 26, 26);
+    border-radius: 1rem;
+    margin: 5rem auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.p4 .lineBox::before{
+    content: "";
+    background-image: linear-gradient(#00ccff, #d400d4);
+    position: absolute;
+    width: 50%;
+    height: 200%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation-name: rotate;
+    animation-duration: 2.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.p4 .lineBox::after{
+    content: "";
+    background-image: linear-gradient(#ff974d, #49fb5b);
+    position: absolute;
+    width: 50%;
+    height: 200%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation-name: rotateAlter;
+    animation-duration: 2.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.p4 .lineBox .lineInBox{
+    position: absolute;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    border-radius: 1rem;
+    background: rgb(26, 26, 26);
+    top: 5px;
+    left: 5px;
+    z-index: 2;
+}
+
+@keyframes rotate{
+    from{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    to{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+
+@keyframes rotateAlter{
+    from{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+    to{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+}
+
+.p5{
+    background: rgb(26, 26, 26);
+}
+
+.p5 .exit{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    width: 300px;
+    height: 132px;
+    padding: 0 1.5rem;
+    margin: 5rem auto;
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.15s linear;
+}
+
+.p5 .exit::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.9);
+}
+
+.p5 .exit .l p{
+    color: rgb(38 148 99);
+    font-size: 2rem;
+
+}
+
+.p5 .exit .r img{
+    width: 100px;
+
+}
+
+.p5 .exit.open{
+    box-shadow: #fff 0 0 20px, #fff 0 0 40px, #fff 0 0 60px;
+    -webkit-box-reflect: below 20px linear-gradient(transparent, #0002);
+}
+
+.p5 .exit.open::before{
+    display: none;
+}
+
+.p5 .exit.open .l p{
+    text-shadow: rgb(38 148 99) 0 0 10px;
+}
+
+.p5 .exit.open .r img{
+    box-shadow: rgb(38 148 99) 0 0 10px;
+}
+
+.p5 .switch{
+    display: flex;
+    margin: 13rem auto;
+    padding: 0.25rem 1rem;
 }

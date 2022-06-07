@@ -35,10 +35,9 @@
     </div>
 
     <div class="page p3">
-
         <div class="btnBox">
             <button class="btn" onclick="toPage(937)">Back</button>
-            <button class="btn" onclick="toPage(0)">Next</button>
+            <button class="btn" onclick="toPage(2811)">Next</button>
         </div>
 
         <div class="rangeBox">
@@ -48,6 +47,34 @@
                 <span>Type Change</span> 
             </button>
         </div>
+    </div>
+
+    <div class="page p4">
+        <div class="btnBox">
+            <button class="btn" onclick="toPage(1874)">Back</button>
+            <button class="btn" onclick="toPage(3748)">Next</button>
+        </div>
+
+        <div class="lineBox">
+            <div class="lineInBox"></div>
+        </div>
+    </div>
+
+    <div class="page p5">
+        <div class="btnBox">
+            <button class="btn" onclick="toPage(2811)">Back</button>
+            <button class="btn" onclick="toPage(0)">Next</button>
+        </div>
+        <div class="exit">
+            <div class="l">
+                <p>緊急出口</p>
+                <p>exit</p>
+            </div>
+            <div class="r">
+                <img src="img/exit.svg">
+            </div>
+        </div>
+        <button class="switch" onclick="p5_light()">switch</button>
     </div>
 
 </body>
@@ -68,6 +95,10 @@
 
     const typeChange = () =>{
         conic.classList.toggle("type2")
+    }
+
+    function p5_light(){
+        document.querySelector(".p5 .exit").classList.toggle("open")
     }
     
 </script>
