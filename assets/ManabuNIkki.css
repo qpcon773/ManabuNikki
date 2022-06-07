@@ -1,0 +1,389 @@
+.p1 {
+  background: #1a1a1a;
+}
+.p1 .box {
+  margin: 0 auto;
+  width: 200px;
+  height: 400px;
+  position: relative;
+}
+.p1 .box:hover p {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.p1 .box p {
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.p1 .box p.card1 {
+  position: absolute;
+  background: #fff;
+}
+.p1 .box p.card1 span {
+  text-align: right;
+  display: block;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.p1 .box p.card2 {
+  background: #1a1a1a;
+  position: relative;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.p2 {
+  background: url(../img/pexels-piccinng-3075993.jpg) no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.p2 .p2Background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 200px;
+  font-weight: 600;
+  mix-blend-mode: screen;
+}
+@media screen and (max-width: 1023px) {
+  .p2 .p2Background {
+    font-size: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p2 .p2Background {
+    font-size: 50px;
+  }
+}
+
+@-webkit-keyframes rangeButtonA {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes rangeButtonA {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+@-webkit-keyframes rangeButtonB {
+  0% {
+    width: 0px;
+    left: 50%;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+  }
+}
+@keyframes rangeButtonB {
+  0% {
+    width: 0px;
+    left: 50%;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+  }
+}
+.p3 .rangeBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.p3 .rangeBox .conic {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 1rem auto;
+  border-radius: 50%;
+  background: conic-gradient(#fc0 0, #fc0 var(--ratio), #59f 0deg);
+}
+.p3 .rangeBox .conic.type2::before {
+  content: attr(data-deg);
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+}
+.p3 .rangeBox .rangeButton {
+  position: relative;
+  margin-top: 2rem;
+  border: 0;
+  outline: 0;
+  background-color: #fff;
+  z-index: 0;
+  overflow: hidden;
+}
+.p3 .rangeBox .rangeButton:hover::before, .p3 .rangeBox .rangeButton:hover::after {
+  -webkit-animation-name: rangeButtonB;
+          animation-name: rangeButtonB;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.p3 .rangeBox .rangeButton:hover span {
+  color: #fff;
+}
+.p3 .rangeBox .rangeButton:hover span:before {
+  -webkit-animation-name: rangeButtonA;
+          animation-name: rangeButtonA;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-duration: 0.1s;
+          animation-duration: 0.1s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.p3 .rangeBox .rangeButton::before, .p3 .rangeBox .rangeButton::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 1px;
+  background: #c598f3;
+  left: 50%;
+}
+.p3 .rangeBox .rangeButton::before {
+  top: 0;
+}
+.p3 .rangeBox .rangeButton::after {
+  bottom: 0;
+}
+.p3 .rangeBox .rangeButton span {
+  display: block;
+  color: #000;
+  padding: 1rem 2rem;
+  z-index: 0;
+  -webkit-transition: color 0.5s ease-out;
+  transition: color 0.5s ease-out;
+}
+.p3 .rangeBox .rangeButton span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #c598f3;
+  left: 0;
+  top: -100%;
+  z-index: -1;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@-webkit-keyframes rotateAlter {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+@keyframes rotateAlter {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+.p4 .lineBox {
+  width: 200px;
+  height: 300px;
+  background: #1a1a1a;
+  border-radius: 1rem;
+  margin: 5rem auto;
+  overflow: hidden;
+  position: relative;
+}
+.p4 .lineBox::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 200%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#00ccff), to(#d400d4));
+  background-image: linear-gradient(#00ccff, #d400d4);
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+}
+.p4 .lineBox::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 200%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff974d), to(#49fb5b));
+  background-image: linear-gradient(#ff974d, #49fb5b);
+  -webkit-animation-name: rotateAlter;
+          animation-name: rotateAlter;
+}
+.p4 .lineBox .lineInBox {
+  position: absolute;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border-radius: 1rem;
+  background: #1a1a1a;
+  top: 5px;
+  left: 5px;
+  z-index: 2;
+}
+
+.p5 {
+  background: #1a1a1a;
+}
+.p5 .exit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #fff;
+  width: 300px;
+  height: 132px;
+  padding: 0 1.5rem;
+  margin: 5rem auto;
+  position: relative;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.p5 .exit.open {
+  -webkit-box-shadow: #fff 0 0 20px, #fff 0 0 40px, #fff 0 0 60px;
+          box-shadow: #fff 0 0 20px, #fff 0 0 40px, #fff 0 0 60px;
+  -webkit-box-reflect: below 20px linear-gradient(transparent, #0002);
+  border-radius: 4px;
+}
+.p5 .exit.open::before {
+  display: none;
+}
+.p5 .exit.open .l p {
+  text-shadow: #269463 0 0 10px;
+}
+.p5 .exit.open .r img {
+  -webkit-box-shadow: #269463 0 0 10px;
+          box-shadow: #269463 0 0 10px;
+}
+.p5 .exit::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.9);
+}
+.p5 .exit .l p {
+  color: #269463;
+  font-size: 2rem;
+}
+.p5 .exit .r img {
+  width: 100px;
+}
+.p5 .switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 13rem auto;
+  padding: 0.25rem 1rem;
+}

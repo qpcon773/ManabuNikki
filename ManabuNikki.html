@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/ManabuNIkki.css" />
+    <link rel="stylesheet" href="assets/Global.css" />
+    <link rel="stylesheet" href="assets/ManabuNIkki.css" />
 </head>
 <body>
     <div class="page p1">
@@ -21,8 +22,8 @@
         <div class="btnBox">
             <button class="btn" onclick="toPage(937)">Next</button>
         </div>
-
     </div>
+    
     <div class="page p2">
         <div class="p2Background">
             <p>測試文字</p>
@@ -78,28 +79,5 @@
     </div>
 
 </body>
-<script>
-    const toPage = e =>{
-        window.scroll({
-            top: e,
-            behavior: "smooth"
-        })
-    }
-
-    let r1 = document.querySelector("#r1")
-    let conic = document.querySelector(".conic")
-    r1.addEventListener("input",()=>{
-        conic.style.setProperty("--ratio", `${(r1.value * 3.6).toFixed(0)}deg`)
-        conic.setAttribute("data-deg",`${(r1.value * 3.6).toFixed(0)}`)
-    })
-
-    const typeChange = () =>{
-        conic.classList.toggle("type2")
-    }
-
-    function p5_light(){
-        document.querySelector(".p5 .exit").classList.toggle("open")
-    }
-    
-</script>
+<script src="assets/ManabuNIkki.js"></script>
 </html>
